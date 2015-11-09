@@ -1,27 +1,33 @@
 package com.mysoft.xml;
 
-import java.io.IOException;
-import java.net.URISyntaxException;
 import java.util.List;
 
 import org.junit.Test;
-import org.xml.sax.SAXException;
 
 import com.mysoft.xml.bean.Group;
+import com.mysoft.xml.parser.IParser;
 import com.mysoft.xml.parser.dom.DomParser;
+import com.mysoft.xml.parser.sax.SaxParser;
 
 public class DomParserTest {
 
 	@Test
-	public void testDomParser(){
+	public void testParser(){
+		String parserType = "sax";
 		
+		IParser parser = null;
 		try {
-			DomParser dp = new DomParser();
-			List<Group> groupList = dp.getGroupList("file.xml");
-			System.out.println(groupList);
-		} catch (SAXException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
+			
+			if("dom".equals(parserType)){
+				parser = new DomParser();
+			} else if("sax".equals(parserType)){
+				parser = new SaxParser();
+			}
+			
+			List<Group> list = parser.getGroupList("file.xml");
+			System.out.println(list);
+			
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
