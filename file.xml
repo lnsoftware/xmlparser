@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>  
+<root>  
+    <description>All application groups.</description>  
+    <groups>  
+        <group name="bossAppGroup">  
+            <machine name="bossNode1" type="virtual">  
+                <ip>192.168.0.11</ip>  
+                <hostname>bossApp1</hostname>  
+            </machine>  
+            <machine name="bossNode2" type="concrete">  
+                <ip>192.168.0.12</ip>  
+                <hostname>bossApp2</hostname>  
+            </machine>  
+        </group>  
+        <group name="wlanAppGroup">  
+            <machine name="wlanNode1" type="concrete">  
+                <ip>192.168.0.21</ip>  
+                <hostname>wlan1</hostname>  
+            </machine>  
+            <machine name="wlanNode2" type="concrete">  
+                <ip>192.168.0.22</ip>  
+                <hostname>wlan2</hostname>  
+            </machine>  
+        </group>  
+    </groups>  
+</root>
