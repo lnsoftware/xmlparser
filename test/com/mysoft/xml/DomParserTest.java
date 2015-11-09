@@ -8,7 +8,7 @@ import org.junit.Test;
 import org.xml.sax.SAXException;
 
 import com.mysoft.xml.bean.Group;
-import com.mysoft.xml.parser.impl.DomParser;
+import com.mysoft.xml.parser.dom.DomParser;
 
 public class DomParserTest {
 

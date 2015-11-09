@@ -1,4 +1,4 @@
-package com.mysoft.xml.parser.impl;
+package com.mysoft.xml.parser.dom;
 
 import java.io.IOException;
 import java.util.ArrayList;
