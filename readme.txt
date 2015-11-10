@@ -32,4 +32,10 @@
 	3.2 解析说明
 		主要借助于xpath完成解析
 					
+4. DOM4J解析
+	4.1 使用jar包
+		org.dom4j包和jaxen(xpath)包
+	4.2 解析说明
+		同样借助于xpath来完成解析
 		
+						
