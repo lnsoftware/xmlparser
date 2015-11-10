@@ -7,13 +7,14 @@ import org.junit.Test;
 import com.mysoft.xml.bean.Group;
 import com.mysoft.xml.parser.IParser;
 import com.mysoft.xml.parser.dom.DomParser;
+import com.mysoft.xml.parser.jdom.JDomParser;
 import com.mysoft.xml.parser.sax.SaxParser;
 
 public class DomParserTest {
 
 	@Test
 	public void testParser(){
-		String parserType = "sax";
+		String parserType = "jdom";
 		
 		IParser parser = null;
 		try {
@@ -22,6 +23,8 @@ public class DomParserTest {
 				parser = new DomParser();
 			} else if("sax".equals(parserType)){
 				parser = new SaxParser();
+			} else if("jdom".equals(parserType)){
+				parser = new JDomParser();
 			}
 			
 			List<Group> list = parser.getGroupList("file.xml");
